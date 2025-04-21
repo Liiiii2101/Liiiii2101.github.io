@@ -1,20 +1,21 @@
-<!-- src/about.html -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Me</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
+  <head>
+    <meta charset="UTF-8" />
+    <title>About Me</title>
+    <link rel="stylesheet" href="../style.css" />
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 2rem;
+      }
+    </style>
+  </head>
+  <body>
     <h1>About Me</h1>
-    <a href="index.html">← Back to Home</a>
-  </header>
-  <main>
-    <p>Hello! I'm Lishan, an AI engineer passionate about deep learning, medical imaging, and D3 visualizations.</p>
-    <!-- Add more content here -->
-  </main>
-</body>
+    <div id="terminal-root"></div>
+
+    <!-- Bundle will be added here -->
+    <script type="module" src="./terminal.js"></script>
+  </body>
 </html>
