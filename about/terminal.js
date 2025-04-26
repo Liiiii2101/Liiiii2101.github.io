@@ -1,7 +1,10 @@
 const commands = {
-  whoami: "Liiiii2101 - AI Engineer",
+  whoami: "Lishan - AI Engineer",
   skills: "Python, PyTorch, D3.js, React, Docker, Bash, Medical Imaging",
-  contact: "📧 Email: your.email@example.com",
+  contact: "📧 Email: shanshancai@hotmail.com",
+  pwd: "You are in the terminal of Lishan's portfolio.",
+  cd: "You are already in the terminal of Lishan's portfolio.",
+  ls: "Available commands: whoami, skills, contact, help",  
   help: "Available commands: whoami, skills, contact, help"
 };
 
