@@ -1,6 +1,5 @@
-import React from "react";
-import { createRoot } from "react-dom/client";
-import { ReactTerminal } from "react-terminal";
+const { createRoot } = ReactDOM;
+const { ReactTerminal } = window.ReactTerminal;
 
 const commands = {
   whoami: "Liiiii2101 - AI Engineer",
@@ -10,14 +9,15 @@ const commands = {
 };
 
 const App = () => (
-  <div style={{ width: "100%", maxWidth: 600, margin: "2rem auto" }}>
-    <ReactTerminal
-      prompt=">>>"
-      commands={commands}
-      welcomeMessage={"Type `help` to see available commands"}
-    />
-  </div>
+  React.createElement('div', { style: { width: "100%", maxWidth: 600, margin: "2rem auto" } },
+    React.createElement(ReactTerminal, {
+      prompt: ">>>",
+      commands: commands,
+      welcomeMessage: "Type `help` to see available commands"
+    })
+  )
 );
 
 const container = document.getElementById("terminal-root");
-createRoot(container).render(<App />);
+const root = createRoot(container);
+root.render(React.createElement(App));
