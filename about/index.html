@@ -1,29 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>About Me</title>
-    <link rel="stylesheet" href="style.css" />
-    <style>
-      body {
-        font-family: sans-serif;
-        padding: 2rem;
-      }
-    </style>
+<head>
+  <meta charset="UTF-8" />
+  <title>About Me</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 2rem;
+      background: #0f0f0f;
+      color: #00ff00;
+    }
+    .terminal {
+      background: black;
+      padding: 2rem;
+      font-family: monospace;
+      border-radius: 10px;
+      max-width: 600px;
+      margin: 2rem auto;
+    }
+    .terminal-line {
+      margin: 0.5rem 0;
+    }
+    .prompt {
+      color: #00ff00;
+    }
+    input {
+      background: black;
+      color: #00ff00;
+      border: none;
+      font-family: monospace;
+      width: 100%;
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>About Me</h1>
+  <div class="terminal" id="terminal">
+    <div class="terminal-line">Type <b>help</b> to see commands</div>
+  </div>
+  <input id="commandInput" placeholder=">>> type here..." autofocus />
 
-    <!-- Load React and ReactDOM from CDN -->
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-
-    <!-- Load ReactTerminal from CDN -->
-    <script src="https://unpkg.com/react-terminal@3/umd/react-terminal.production.min.js"></script>
-  </head>
-
-  <body>
-    <h1>About Me</h1>
-    <div id="terminal-root"></div>
-
-    <!-- Your script will go here -->
-    <script src="terminal.js"></script>
-  </body>
+  <script src="terminal.js"></script>
+</body>
 </html>

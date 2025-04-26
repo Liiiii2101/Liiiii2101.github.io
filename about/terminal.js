@@ -1,6 +1,3 @@
-const { createRoot } = ReactDOM;
-const { ReactTerminal } = window.ReactTerminal;
-
 const commands = {
   whoami: "Liiiii2101 - AI Engineer",
   skills: "Python, PyTorch, D3.js, React, Docker, Bash, Medical Imaging",
@@ -8,16 +5,18 @@ const commands = {
   help: "Available commands: whoami, skills, contact, help"
 };
 
-const App = () => (
-  React.createElement('div', { style: { width: "100%", maxWidth: 600, margin: "2rem auto" } },
-    React.createElement(ReactTerminal, {
-      prompt: ">>>",
-      commands: commands,
-      welcomeMessage: "Type `help` to see available commands"
-    })
-  )
-);
+const terminal = document.getElementById('terminal');
+const input = document.getElementById('commandInput');
 
-const container = document.getElementById("terminal-root");
-const root = createRoot(container);
-root.render(React.createElement(App));
+input.addEventListener('keydown', function(event) {
+  if (event.key === 'Enter') {
+    const value = input.value.trim();
+    if (value) {
+      const output = commands[value] || `Command not found: ${value}`;
+      terminal.innerHTML += `<div class="terminal-line"><span class="prompt">>></span> ${value}</div>`;
+      terminal.innerHTML += `<div class="terminal-line">${output}</div>`;
+      terminal.scrollTop = terminal.scrollHeight;
+      input.value = '';
+    }
+  }
+});
