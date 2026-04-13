@@ -2,45 +2,122 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>About Me</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Lishan</title>
+  <link rel="icon" href="../favicon.ico" type="image/x-icon" />
   <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
-      font-family: sans-serif;
-      padding: 2rem;
+      font-family: 'Courier New', Courier, monospace;
       background: #0f0f0f;
-      color: #00ff00;
-    }
-    .terminal {
-      background: black;
+      color: #ccc;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       padding: 2rem;
-      font-family: monospace;
+    }
+
+    .back-link {
+      position: fixed;
+      top: 1.5rem;
+      left: 1.5rem;
+      color: #666;
+      text-decoration: none;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: #ff963b; }
+
+    .terminal {
+      background: #111;
+      border: 1px solid #2a2a2a;
       border-radius: 10px;
-      max-width: 600px;
-      margin: 2rem auto;
-    }
-    .terminal-line {
-      margin: 0.5rem 0;
-    }
-    .prompt {
-      color: #00ff00;
-    }
-    input {
-      background: black;
-      color: #00ff00;
-      border: none;
-      font-family: monospace;
       width: 100%;
+      max-width: 660px;
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+      overflow: hidden;
+    }
+
+    .terminal-titlebar {
+      background: #1e1e1e;
+      padding: 0.6rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      border-bottom: 1px solid #2a2a2a;
+    }
+    .dot {
+      width: 12px; height: 12px;
+      border-radius: 50%;
+    }
+    .dot-red   { background: #ff5f56; }
+    .dot-yellow{ background: #ffbd2e; }
+    .dot-green { background: #27c93f; }
+    .terminal-title {
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 0.75rem;
+      color: #555;
+      letter-spacing: 1px;
+    }
+
+    .terminal-body {
+      padding: 1.5rem;
+      min-height: 320px;
+      max-height: 60vh;
+      overflow-y: auto;
+    }
+
+    .terminal-line {
+      margin: 0.35rem 0;
+      line-height: 1.5;
+      white-space: pre-wrap;
+    }
+    .prompt  { color: #27c93f; }
+    .output  { color: #aaa; }
+    .error   { color: #ff5f56; }
+
+    .input-row {
+      display: flex;
+      align-items: center;
+      padding: 0.75rem 1.5rem;
+      border-top: 1px solid #2a2a2a;
+      gap: 0.5rem;
+    }
+    .input-prompt { color: #27c93f; flex-shrink: 0; }
+    input {
+      background: transparent;
+      border: none;
       outline: none;
+      color: #e0e0e0;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 1rem;
+      width: 100%;
     }
   </style>
 </head>
 <body>
-  <h1>About Me</h1>
-  <div class="terminal" id="terminal">
-    <div class="terminal-line">Type <b>help</b> to see commands</div>
+  <a class="back-link" href="../index.html">← back</a>
+
+  <div class="terminal">
+    <div class="terminal-titlebar">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+      <span class="terminal-title">lishan@portfolio ~ bash</span>
+    </div>
+    <div class="terminal-body" id="terminal">
+      <div class="terminal-line output">Welcome to Lishan's terminal. Type <b>help</b> for available commands.</div>
+    </div>
+    <div class="input-row">
+      <span class="input-prompt">lishan@portfolio:~$&nbsp;</span>
+      <input id="commandInput" type="text" autocomplete="off" autofocus spellcheck="false" />
+    </div>
   </div>
-  <input id="commandInput" placeholder=">>> type here..." autofocus />
 
   <script src="terminal.js"></script>
 </body>

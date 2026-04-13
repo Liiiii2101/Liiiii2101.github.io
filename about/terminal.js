@@ -1,25 +1,42 @@
 const commands = {
-  whoami: "Lishan - AI Engineer",
-  skills: "Python, PyTorch, D3.js, React, Docker, Bash, Medical Imaging",
-  contact: "📧 Email: shanshancai@hotmail.com",
-  pwd: "You are in the terminal of Lishan's portfolio.",
-  cd: "You are already in the terminal of Lishan's portfolio.",
-  ls: "Available commands: whoami, skills, contact, help",  
-  help: "Available commands: whoami, skills, contact, help"
+  help:     "Available commands: whoami, skills, contact, linkedin, pwd, ls, clear, help",
+  ls:       "Available commands: whoami, skills, contact, linkedin, pwd, ls, clear, help",
+  whoami:   "Lishan Cai — AI Engineer | Deep Learning | Medical Image Analysis",
+  skills:   "Python, PyTorch, Deep Learning, Medical Imaging, D3.js, React, Docker, Bash",
+  contact:  "Email: shanshancai@hotmail.com",
+  linkedin: '<a href="https://www.linkedin.com/in/lishan-cai-851b20178/" target="_blank" rel="noopener" style="color:#ff963b">linkedin.com/in/lishan-cai-851b20178</a>',
+  pwd:      "/home/lishan/portfolio",
+  cd:       "You are already in the right place.",
 };
 
 const terminal = document.getElementById('terminal');
-const input = document.getElementById('commandInput');
+const input    = document.getElementById('commandInput');
+
+function appendLine(html, cls = 'output') {
+  const div = document.createElement('div');
+  div.className = 'terminal-line ' + cls;
+  div.innerHTML = html;
+  terminal.appendChild(div);
+  terminal.scrollTop = terminal.scrollHeight;
+}
 
 input.addEventListener('keydown', function(event) {
-  if (event.key === 'Enter') {
-    const value = input.value.trim();
-    if (value) {
-      const output = commands[value] || `Command not found: ${value}`;
-      terminal.innerHTML += `<div class="terminal-line"><span class="prompt">>></span> ${value}</div>`;
-      terminal.innerHTML += `<div class="terminal-line">${output}</div>`;
-      terminal.scrollTop = terminal.scrollHeight;
-      input.value = '';
+  if (event.key !== 'Enter') return;
+  const value = input.value.trim();
+  if (!value) return;
+
+  appendLine(`<span class="prompt">lishan@portfolio:~$</span> ${value}`);
+
+  if (value === 'clear') {
+    terminal.innerHTML = '';
+  } else {
+    const response = commands[value];
+    if (response) {
+      appendLine(response);
+    } else {
+      appendLine(`Command not found: ${value}. Type <b>help</b> for available commands.`, 'error');
     }
   }
+
+  input.value = '';
 });
