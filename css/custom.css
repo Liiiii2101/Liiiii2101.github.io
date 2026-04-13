@@ -1,0 +1,122 @@
+/* ─── Avatar ─────────────────────────────────────────── */
+#card .card-inner header img {
+  width: 130px;
+  height: 130px;
+  border: 3px solid rgba(255, 255, 255, 0.75);
+  box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.08),
+              0 12px 40px rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+#card .card-inner header img:hover {
+  transform: scale(1.06);
+  box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.18),
+              0 16px 50px rgba(0, 0, 0, 0.55);
+}
+
+/* ─── Card — glass panel ─────────────────────────────── */
+#card .card-inner {
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 24px !important;
+  padding: 2.5rem 2.25rem !important;
+  box-shadow: 0 8px 48px rgba(0, 0, 0, 0.35);
+  width: 32% !important;
+}
+
+@media screen and (max-width: 1024px) { #card .card-inner { width: 44% !important; } }
+@media screen and (max-width: 768px)  { #card .card-inner { width: 52% !important; } }
+@media screen and (max-width: 540px)  { #card .card-inner { width: 78% !important; } }
+@media screen and (max-width: 480px)  { #card .card-inner { width: 92% !important; } }
+
+/* ─── Card header ────────────────────────────────────── */
+#card .card-inner header {
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.25rem;
+}
+
+#card .card-inner header h1 {
+  font-size: 2rem !important;
+  letter-spacing: 3px;
+  margin: 1rem 0 0.35rem;
+}
+
+#card .card-inner header h2 {
+  font-size: 0.7rem !important;
+  letter-spacing: 2.5px;
+  color: rgba(200, 200, 200, 0.75) !important;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* ─── Nav list ───────────────────────────────────────── */
+#card .card-inner ul {
+  padding-bottom: 0 !important;
+  border-bottom: none !important;
+  gap: 0.1rem;
+}
+
+#card .card-inner ul li {
+  border: none !important;
+  transition: transform 0.2s ease;
+}
+
+#card .card-inner ul li a {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.65rem 0.25rem;
+  border-radius: 10px;
+  transition: background 0.2s ease, color 0.2s ease !important;
+}
+
+#card .card-inner ul li a:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff !important;
+  text-shadow: none !important;
+}
+
+#card .card-inner ul li:hover {
+  transform: translateY(-3px);
+}
+
+/* ─── Enter button ───────────────────────────────────── */
+.enter {
+  border: 1px solid rgba(255, 255, 255, 0.28) !important;
+  padding: 0.55rem 2.25rem !important;
+  border-radius: 40px !important;
+  letter-spacing: 5px;
+  font-size: 0.72rem !important;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transition: background 0.3s, border-color 0.3s, letter-spacing 0.3s, color 0.3s !important;
+}
+
+.enter:hover,
+.enter:focus {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-color: rgba(255, 255, 255, 0.55) !important;
+  color: #fff !important;
+  letter-spacing: 7px;
+}
+
+/* ─── Intro title glow ───────────────────────────────── */
+.content-title {
+  font-size: 5.5rem !important;
+  letter-spacing: 8px !important;
+}
+
+@media screen and (max-width: 50em) {
+  .content-title { font-size: 2.5rem !important; letter-spacing: 4px !important; }
+}
+
+/* ─── Subtitle ───────────────────────────────────────── */
+.content-subtitle {
+  font-size: 1rem !important;
+  letter-spacing: 1px !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+}
