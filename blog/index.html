@@ -1,137 +1,194 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blog — Lishan</title>
+  <title>Lishan Cai</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥔</text></svg>" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      background: #111;
-      color: #ccc;
-      min-height: 100vh;
-      padding: 4rem 2rem;
-    }
-
-    .back-link {
-      position: fixed;
-      top: 1.5rem;
-      left: 1.5rem;
-      color: #555;
-      text-decoration: none;
-      font-size: 0.85rem;
-      letter-spacing: 1px;
-      transition: color 0.2s;
-    }
-    .back-link:hover { color: #ff963b; }
-
-    .container {
-      max-width: 720px;
-      margin: 0 auto;
-    }
-
-    h1 {
-      font-size: 2rem;
-      font-weight: 300;
-      color: #fff;
-      letter-spacing: 2px;
-      margin-bottom: 0.5rem;
-    }
-
-    .tagline {
-      font-size: 0.9rem;
-      color: #555;
-      letter-spacing: 1px;
-      margin-bottom: 3rem;
-    }
-
-    .post-list {
-      list-style: none;
-    }
-
-    .post-item {
-      border-bottom: 1px solid #222;
-      padding: 1.5rem 0;
-    }
-    .post-item:first-child { border-top: 1px solid #222; }
-
-    .post-date {
-      font-size: 0.75rem;
-      color: #555;
-      letter-spacing: 1px;
-      margin-bottom: 0.4rem;
-    }
-
-    .post-title {
-      font-size: 1.1rem;
-      color: #e0e0e0;
-      font-weight: 400;
-      margin-bottom: 0.5rem;
-    }
-
-    .post-desc {
-      font-size: 0.85rem;
-      color: #777;
-      line-height: 1.6;
-    }
-
-    .post-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      margin-top: 0.7rem;
-    }
-
-    .tag {
-      font-size: 0.7rem;
-      padding: 2px 8px;
-      border: 1px solid #333;
-      border-radius: 20px;
-      color: #888;
-      letter-spacing: 0.5px;
-    }
-
-    .coming-soon {
-      text-align: center;
-      padding: 4rem 0;
-      color: #444;
-      font-size: 0.9rem;
-      letter-spacing: 1px;
-    }
-  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="blog.css" />
 </head>
 <body>
-  <a class="back-link" href="../index.html">← back</a>
 
-  <div class="container">
-    <h1>Blog</h1>
-    <p class="tagline">Thoughts on deep learning, medical imaging, and AI.</p>
+  <!-- Top bar -->
+  <header class="topbar">
+    <a class="topbar-title" href="../index.html">Lishan Cai / Homepage</a>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+      <i class="fa fa-moon" id="themeIcon"></i>
+    </button>
+  </header>
 
-    <ul class="post-list">
-      <li class="post-item">
-        <div class="post-date">Coming soon</div>
-        <div class="post-title">Topology-Aware Loss Functions in Medical Image Segmentation</div>
-        <div class="post-desc">An overview of how topological constraints can guide neural networks to produce anatomically plausible segmentations.</div>
-        <div class="post-tags">
-          <span class="tag">deep learning</span>
-          <span class="tag">medical imaging</span>
-          <span class="tag">topology</span>
+  <div class="page-wrapper">
+
+    <!-- Left sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-inner">
+        <img src="./avatar.jpg" alt="Lishan Cai" class="avatar" />
+        <h2 class="sidebar-name">Lishan Cai</h2>
+        <p class="sidebar-title">AI Engineer &amp; Researcher</p>
+        <p class="sidebar-affil">Amsterdam, Netherlands</p>
+
+        <ul class="sidebar-links">
+          <li>
+            <a href="mailto:lishancai21@gmail.com">
+              <i class="fa fa-envelope"></i>
+              <span>lishancai21@gmail.com</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://scholar.google.com" target="_blank" rel="noopener">
+              <i class="fa fa-graduation-cap"></i>
+              <span>Google Scholar</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/Liiiii2101" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i>
+              <span>GitHub</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/lishan-cai-851b20178/" target="_blank" rel="noopener">
+              <i class="fab fa-linkedin"></i>
+              <span>LinkedIn</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main-content">
+
+      <!-- About -->
+      <section>
+        <h2 class="section-title">👋 About</h2>
+        <p>
+          I am an AI engineer and researcher with a strong interest in <strong>deep learning</strong>,
+          <strong>medical image analysis</strong>, and <strong>human-centered AI systems</strong>.
+          My work focuses on developing robust, interpretable models that support clinical decision-making
+          and improve patient outcomes.
+        </p>
+        <p>
+          I am based in Amsterdam, passionate about bridging the gap between state-of-the-art machine
+          learning research and real-world clinical applications.
+        </p>
+
+        <h3 class="subsection-title">🎯 Research Interests</h3>
+        <ul>
+          <li>Medical image segmentation and analysis</li>
+          <li>Topology-aware deep learning</li>
+          <li>Self-supervised and semi-supervised learning</li>
+          <li>Human-centered AI and clinical decision support</li>
+          <li>Uncertainty estimation in neural networks</li>
+        </ul>
+      </section>
+
+      <hr />
+
+      <!-- News -->
+      <section>
+        <h2 class="section-title">📣 News</h2>
+        <ul class="news-list">
+          <li>
+            <span class="news-date">2024</span>
+            🔬 Started research on topology-aware loss functions for medical image segmentation.
+          </li>
+          <li>
+            <span class="news-date">2024</span>
+            🎉 Joined as AI Engineer in Amsterdam.
+          </li>
+        </ul>
+      </section>
+
+      <hr />
+
+      <!-- Publications -->
+      <section>
+        <h2 class="section-title">📚 Publications</h2>
+
+        <div class="pub">
+          <p class="pub-title">
+            <a href="#">Topology-Aware Segmentation of Medical Images Using Deep Neural Networks</a>
+          </p>
+          <p class="pub-authors"><strong>Lishan Cai</strong>, Co-author A, Co-author B</p>
+          <p class="pub-venue"><em>Conference / Journal Name</em>, 2024</p>
+          <div class="pub-badges">
+            <a href="#" class="badge">📑 Paper</a>
+            <a href="https://github.com/Liiiii2101" class="badge" target="_blank" rel="noopener">💻 GitHub</a>
+          </div>
         </div>
-      </li>
-      <li class="post-item">
-        <div class="post-date">Coming soon</div>
-        <div class="post-title">Human-Centered AI in Clinical Decision Support</div>
-        <div class="post-desc">Reflections on bridging the gap between model performance and clinical trust.</div>
-        <div class="post-tags">
-          <span class="tag">AI</span>
-          <span class="tag">clinical</span>
-          <span class="tag">human-centered</span>
+
+        <div class="pub">
+          <p class="pub-title">
+            <a href="#">Human-Centered AI for Clinical Decision Support: A Survey</a>
+          </p>
+          <p class="pub-authors"><strong>Lishan Cai</strong>, Co-author A</p>
+          <p class="pub-venue"><em>Conference / Journal Name</em>, 2024</p>
+          <div class="pub-badges">
+            <a href="#" class="badge">📑 Paper</a>
+          </div>
         </div>
-      </li>
-    </ul>
+      </section>
+
+      <hr />
+
+      <!-- Education -->
+      <section>
+        <h2 class="section-title">🎓 Education</h2>
+        <ul class="cv-list">
+          <li>
+            <span class="cv-year">20XX – Present</span>
+            <span class="cv-detail"><strong>M.Sc. / Ph.D. in [Field]</strong> · [University Name]</span>
+          </li>
+          <li>
+            <span class="cv-year">20XX – 20XX</span>
+            <span class="cv-detail"><strong>B.Sc. in [Field]</strong> · [University Name]</span>
+          </li>
+        </ul>
+      </section>
+
+      <hr />
+
+      <!-- Experience -->
+      <section>
+        <h2 class="section-title">💼 Experience</h2>
+        <ul class="cv-list">
+          <li>
+            <span class="cv-year">20XX – Present</span>
+            <span class="cv-detail"><strong>AI Engineer</strong> · [Company / Institute], Amsterdam</span>
+          </li>
+          <li>
+            <span class="cv-year">20XX – 20XX</span>
+            <span class="cv-detail"><strong>Research Intern</strong> · [Company / Institute]</span>
+          </li>
+        </ul>
+      </section>
+
+    </main>
   </div>
+
+  <footer class="site-footer">
+    <p>© 2024 Lishan Cai &nbsp;·&nbsp; Last updated: April 2026</p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    const icon   = document.getElementById('themeIcon');
+    const root   = document.documentElement;
+
+    const saved = localStorage.getItem('theme') || 'light';
+    root.setAttribute('data-theme', saved);
+    icon.className = saved === 'dark' ? 'fa fa-sun' : 'fa fa-moon';
+
+    toggle.addEventListener('click', () => {
+      const current = root.getAttribute('data-theme');
+      const next    = current === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      icon.className = next === 'dark' ? 'fa fa-sun' : 'fa fa-moon';
+    });
+  </script>
+
 </body>
 </html>

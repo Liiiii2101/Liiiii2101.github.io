@@ -1,194 +1,121 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lishan Cai — About</title>
+  <title>About — Lishan</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥔</text></svg>" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
-  <link rel="stylesheet" href="about.css" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Courier New', Courier, monospace;
+      background: #0f0f0f;
+      color: #ccc;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .back-link {
+      position: fixed;
+      top: 1.5rem;
+      left: 1.5rem;
+      color: #666;
+      text-decoration: none;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: #ff963b; }
+
+    .terminal {
+      background: #111;
+      border: 1px solid #2a2a2a;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 660px;
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+      overflow: hidden;
+    }
+
+    .terminal-titlebar {
+      background: #1e1e1e;
+      padding: 0.6rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      border-bottom: 1px solid #2a2a2a;
+    }
+    .dot { width: 12px; height: 12px; border-radius: 50%; }
+    .dot-red    { background: #ff5f56; }
+    .dot-yellow { background: #ffbd2e; }
+    .dot-green  { background: #27c93f; }
+    .terminal-title {
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 0.75rem;
+      color: #555;
+      letter-spacing: 1px;
+    }
+
+    .terminal-body {
+      padding: 1.5rem;
+      min-height: 320px;
+      max-height: 60vh;
+      overflow-y: auto;
+    }
+
+    .terminal-line {
+      margin: 0.35rem 0;
+      line-height: 1.5;
+      white-space: pre-wrap;
+    }
+    .prompt { color: #27c93f; }
+    .output { color: #aaa; }
+    .error  { color: #ff5f56; }
+
+    .input-row {
+      display: flex;
+      align-items: center;
+      padding: 0.75rem 1.5rem;
+      border-top: 1px solid #2a2a2a;
+      gap: 0.5rem;
+    }
+    .input-prompt { color: #27c93f; flex-shrink: 0; }
+    input {
+      background: transparent;
+      border: none;
+      outline: none;
+      color: #e0e0e0;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 1rem;
+      width: 100%;
+    }
+  </style>
 </head>
 <body>
+  <a class="back-link" href="../index.html">← back</a>
 
-  <!-- Top bar -->
-  <header class="topbar">
-    <a class="topbar-title" href="../index.html">Lishan Cai</a>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-      <i class="fa fa-moon" id="themeIcon"></i>
-    </button>
-  </header>
-
-  <div class="page-wrapper">
-
-    <!-- Left sidebar -->
-    <aside class="sidebar">
-      <div class="sidebar-inner">
-        <img src="../assets/avatar.jpg" alt="Lishan Cai" class="avatar" />
-        <h2 class="sidebar-name">Lishan Cai</h2>
-        <p class="sidebar-title">AI Engineer &amp; Researcher</p>
-        <p class="sidebar-affil">Amsterdam, Netherlands</p>
-
-        <ul class="sidebar-links">
-          <li>
-            <a href="mailto:lishancai21@gmail.com">
-              <i class="fa fa-envelope"></i>
-              <span>lishancai21@gmail.com</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://scholar.google.com" target="_blank" rel="noopener">
-              <i class="fa fa-graduation-cap"></i>
-              <span>Google Scholar</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/Liiiii2101" target="_blank" rel="noopener">
-              <i class="fab fa-github"></i>
-              <span>GitHub</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/lishan-cai-851b20178/" target="_blank" rel="noopener">
-              <i class="fab fa-linkedin"></i>
-              <span>LinkedIn</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </aside>
-
-    <!-- Main content -->
-    <main class="main-content">
-
-      <!-- About -->
-      <section>
-        <h2 class="section-title">👋 About</h2>
-        <p>
-          I am an AI engineer and researcher with a strong interest in <strong>deep learning</strong>,
-          <strong>medical image analysis</strong>, and <strong>human-centered AI systems</strong>.
-          My work focuses on developing robust, interpretable models that support clinical decision-making
-          and improve patient outcomes.
-        </p>
-        <p>
-          I am based in Amsterdam, passionate about bridging the gap between state-of-the-art machine
-          learning research and real-world clinical applications.
-        </p>
-
-        <h3 class="subsection-title">🎯 Research Interests</h3>
-        <ul>
-          <li>Medical image segmentation and analysis</li>
-          <li>Topology-aware deep learning</li>
-          <li>Self-supervised and semi-supervised learning</li>
-          <li>Human-centered AI and clinical decision support</li>
-          <li>Uncertainty estimation in neural networks</li>
-        </ul>
-      </section>
-
-      <hr />
-
-      <!-- News -->
-      <section>
-        <h2 class="section-title">📣 News</h2>
-        <ul class="news-list">
-          <li>
-            <span class="news-date">2024</span>
-            🔬 Started research on topology-aware loss functions for medical image segmentation.
-          </li>
-          <li>
-            <span class="news-date">2024</span>
-            🎉 Joined as AI Engineer in Amsterdam.
-          </li>
-        </ul>
-      </section>
-
-      <hr />
-
-      <!-- Publications -->
-      <section>
-        <h2 class="section-title">📚 Publications</h2>
-
-        <div class="pub">
-          <p class="pub-title">
-            <a href="#">Topology-Aware Segmentation of Medical Images Using Deep Neural Networks</a>
-          </p>
-          <p class="pub-authors"><strong>Lishan Cai</strong>, Co-author A, Co-author B</p>
-          <p class="pub-venue"><em>Conference / Journal Name</em>, 2024</p>
-          <div class="pub-badges">
-            <a href="#" class="badge">📑 Paper</a>
-            <a href="https://github.com/Liiiii2101" class="badge" target="_blank" rel="noopener">💻 GitHub</a>
-          </div>
-        </div>
-
-        <div class="pub">
-          <p class="pub-title">
-            <a href="#">Human-Centered AI for Clinical Decision Support: A Survey</a>
-          </p>
-          <p class="pub-authors"><strong>Lishan Cai</strong>, Co-author A</p>
-          <p class="pub-venue"><em>Conference / Journal Name</em>, 2024</p>
-          <div class="pub-badges">
-            <a href="#" class="badge">📑 Paper</a>
-          </div>
-        </div>
-      </section>
-
-      <hr />
-
-      <!-- Education -->
-      <section>
-        <h2 class="section-title">🎓 Education</h2>
-        <ul class="cv-list">
-          <li>
-            <span class="cv-year">20XX – Present</span>
-            <span class="cv-detail"><strong>M.Sc. / Ph.D. in [Field]</strong> · [University Name]</span>
-          </li>
-          <li>
-            <span class="cv-year">20XX – 20XX</span>
-            <span class="cv-detail"><strong>B.Sc. in [Field]</strong> · [University Name]</span>
-          </li>
-        </ul>
-      </section>
-
-      <hr />
-
-      <!-- Experience -->
-      <section>
-        <h2 class="section-title">💼 Experience</h2>
-        <ul class="cv-list">
-          <li>
-            <span class="cv-year">20XX – Present</span>
-            <span class="cv-detail"><strong>AI Engineer</strong> · [Company / Institute], Amsterdam</span>
-          </li>
-          <li>
-            <span class="cv-year">20XX – 20XX</span>
-            <span class="cv-detail"><strong>Research Intern</strong> · [Company / Institute]</span>
-          </li>
-        </ul>
-      </section>
-
-    </main>
+  <div class="terminal">
+    <div class="terminal-titlebar">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+      <span class="terminal-title">lishan@portfolio ~ bash</span>
+    </div>
+    <div class="terminal-body" id="terminal">
+      <div class="terminal-line output">Welcome to Lishan's terminal. Type <b>help</b> for available commands.</div>
+    </div>
+    <div class="input-row">
+      <span class="input-prompt">lishan@portfolio:~$&nbsp;</span>
+      <input id="commandInput" type="text" autocomplete="off" autofocus spellcheck="false" />
+    </div>
   </div>
 
-  <footer class="site-footer">
-    <p>© 2024 Lishan Cai &nbsp;·&nbsp; Last updated: April 2026</p>
-  </footer>
-
-  <script>
-    const toggle = document.getElementById('themeToggle');
-    const icon   = document.getElementById('themeIcon');
-    const root   = document.documentElement;
-
-    const saved = localStorage.getItem('theme') || 'light';
-    root.setAttribute('data-theme', saved);
-    icon.className = saved === 'dark' ? 'fa fa-sun' : 'fa fa-moon';
-
-    toggle.addEventListener('click', () => {
-      const current = root.getAttribute('data-theme');
-      const next    = current === 'dark' ? 'light' : 'dark';
-      root.setAttribute('data-theme', next);
-      localStorage.setItem('theme', next);
-      icon.className = next === 'dark' ? 'fa fa-sun' : 'fa fa-moon';
-    });
-  </script>
-
+  <script src="terminal.js"></script>
 </body>
 </html>
