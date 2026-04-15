@@ -174,6 +174,59 @@ section ul li { margin-bottom: 0.25rem; }
 
 hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
 
+/* ── Research interests grid ─────────────────────────── */
+.interests-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 0.75rem;
+  padding: 1.25rem;
+  background: var(--interests-bg, #eef0f5);
+  border-radius: 14px;
+}
+
+[data-theme="dark"] .interests-grid {
+  --interests-bg: #1e1e2a;
+}
+
+.interest-tag {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 1rem;
+  background: var(--bg);
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text);
+  border-left: 3px solid transparent;
+  border-image: linear-gradient(to bottom, var(--c1), var(--c2)) 1;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+  transition: transform 0.15s, box-shadow 0.15s;
+  cursor: default;
+  /* border-image doesn't work on rounded corners, use outline trick instead */
+  border: none;
+  position: relative;
+}
+
+.interest-tag::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  padding: 2px;
+  background: linear-gradient(160deg, var(--c1), var(--c2));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.interest-tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
 /* ── News ────────────────────────────────────────────── */
 .news-list { list-style: none; padding: 0; }
 .news-list li {
