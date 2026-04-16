@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lishan Cai</title>
+  <title>Lishan Cai | AI Engineer & Researcher</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥔</text></svg>" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
   <link rel="stylesheet" href="blog.css" />
@@ -15,9 +15,9 @@
     <a class="topbar-title" href="#">Lishan Cai</a>
     <nav class="topbar-nav">
       <a href="#about">About</a>
-      <a href="#news">News</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
       <a href="#publications">Publications</a>
-      <a href="#education">Education</a>
       <a href="#experience">Experience</a>
     </nav>
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
@@ -32,8 +32,13 @@
       <div class="sidebar-inner">
         <img src="./avatar.jpg" alt="Lishan Cai" class="avatar" />
         <h2 class="sidebar-name">Lishan Cai</h2>
-        <p class="sidebar-title">AI Medical Analyst &amp; Researcher</p>
+        <p class="sidebar-title">AI Engineer &amp; Researcher</p>
         <p class="sidebar-affil">Amsterdam, Netherlands</p>
+
+        <a href="../assets/resume.pdf" class="btn-primary">
+          <i class="fa fa-file-pdf"></i>
+          Download CV
+        </a>
 
         <ul class="sidebar-links">
           <li>
@@ -69,125 +74,181 @@
 
       <!-- About -->
       <section id="about">
-        <h2 class="section-title">👋 About</h2>
+        <h2 class="section-title">👋 About Me</h2>
         <p>
-          I am an AI engineer and researcher with a strong interest in <strong>deep learning</strong>, 
-          <strong>computer vision</strong> and <strong>medical image analysis</strong>.
-          My work focuses on developing robust, interpretable models that support clinical decision-making
-          and improve patient outcomes.
+          I am an <strong>AI Engineer and Researcher</strong> dedicated to bridging the gap between state-of-the-art deep learning research and real-world clinical applications. With a PhD background in medical image analysis, I specialize in building robust, interpretable models for complex diagnostic tasks.
         </p>
         <p>
-          I am based in Amsterdam, passionate about bridging the gap between state-of-the-art deep
-          learning research and real-world clinical applications.
+          Currently based in Amsterdam, I focus on <strong>computer vision</strong>, <strong>medical imaging</strong>, and <strong>automated deep learning pipelines</strong> that enhance clinical decision-making and improve patient outcomes.
         </p>
+      </section>
 
-        <h3 class="subsection-title">🎯 Research Interests &amp; Expertise</h3>
-        <div class="interests-grid">
-          <span class="interest-tag" style="--c1:#6c63ff;--c2:#a78bfa">🧠 Deep Learning</span>
-          <span class="interest-tag" style="--c1:#ec4899;--c2:#a855f7">🏥 Medical Imaging</span>
-          <span class="interest-tag" style="--c1:#3b82f6;--c2:#06b6d4">🔬 Tumor Segmentation</span>
-          <span class="interest-tag" style="--c1:#6c63ff;--c2:#3b82f6">📊 Longitudinal Analysis</span>
-          <span class="interest-tag" style="--c1:#3b82f6;--c2:#6c63ff">🔭 Computer Vision</span>
-          <span class="interest-tag" style="--c1:#ec4899;--c2:#f472b6">🔍 Anomaly Detection</span>
-          <span class="interest-tag" style="--c1:#22c55e;--c2:#06b6d4">☢️ Treatment Response</span>
-          <span class="interest-tag" style="--c1:#3b82f6;--c2:#a78bfa">⏳ Risk Classification</span>
-          <span class="interest-tag" style="--c1:#6c63ff;--c2:#3b82f6">🎓 Self-supervised Learning</span>
+      <!-- Skills -->
+      <section id="skills">
+        <h2 class="section-title">🛠️ Technical Stack</h2>
+        <div class="skills-container">
+          <div class="skill-category">
+            <h4>Deep Learning</h4>
+            <div class="skill-tags">
+              <span class="skill-tag">PyTorch</span>
+              <span class="skill-tag">TensorFlow</span>
+              <span class="skill-tag">nnU-Net</span>
+              <span class="skill-tag">HuggingFace</span>
+              <span class="skill-tag">Scikit-learn</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h4>Medical Imaging</h4>
+            <div class="skill-tags">
+              <span class="skill-tag">MONAI</span>
+              <span class="skill-tag">OpenCV</span>
+              <span class="skill-tag">ITK/SimpleITK</span>
+              <span class="skill-tag">DICOM</span>
+              <span class="skill-tag">Segmentation</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h4>Engineering</h4>
+            <div class="skill-tags">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">Linux</span>
+              <span class="skill-tag">CI/CD</span>
+            </div>
+          </div>
         </div>
       </section>
 
-      <hr />
+      <!-- Projects -->
+      <section id="projects">
+        <h2 class="section-title">🚀 Featured Projects</h2>
+        <div class="card-grid">
+          
+          <div class="card">
+            <span class="card-tag">Competition</span>
+            <h3 class="card-title">HECKTOR 2025</h3>
+            <p class="card-meta">
+              <strong>Top-1 Solution</strong> for Segmentation and Detection of Head and Neck Cancer Tumors. Developed a multi-modal deep learning approach for robust lesion detection.
+            </p>
+            <div class="card-links">
+              <a href="https://github.com/Liiiii2101" class="card-link" target="_blank"><i class="fab fa-github"></i> Codebase</a>
+            </div>
+          </div>
 
-      <!-- News -->
-      <section id="news">
-        <h2 class="section-title">📣 News</h2>
-        <ul class="news-list">
-          <li>
-            <span class="news-date">Jan 2026</span>
-            📑 Our paper on rectal tumor segmentation on T2W MRI is published in <a href="https://www.nature.com/articles/s41598-025-14265-9" target="_blank" rel="noopener"><em>Scientific Reports</em></a>.
-          </li>
-          <li>
-            <span class="news-date">2025</span>
-            🏆 Top-1 Solution for Segmentation and Detection of Head and Neck Cancer (HNC) Tumors.
-          </li>
-        </ul>
+          <div class="card">
+            <span class="card-tag">Open Source</span>
+            <h3 class="card-title">Anatomy-aware nnU-Net</h3>
+            <p class="card-meta">
+              Improved rectal tumor segmentation using anomaly fusion derived from anatomical inpainting. Integrates domain knowledge into automated segmentation pipelines.
+            </p>
+            <div class="card-links">
+              <a href="https://github.com/Liiiii2101/Anatomy-aware-nnUNet-for-Rectal-Tumor-Segmentation" class="card-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+              <a href="https://www.nature.com/articles/s41598-025-14265-9" class="card-link" target="_blank"><i class="fa fa-file-alt"></i> Paper</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <span class="card-tag">Research Tool</span>
+            <h3 class="card-title">MLNet</h3>
+            <p class="card-meta">
+              An automated deep learning pipeline for EMVI classification and response prediction of rectal cancer using baseline MRI.
+            </p>
+            <div class="card-links">
+              <a href="https://github.com/Liiiii2101/MLNet" class="card-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+              <a href="https://www.nature.com/articles/s41698-024-00516-x" class="card-link" target="_blank"><i class="fa fa-file-alt"></i> Paper</a>
+            </div>
+          </div>
+
+        </div>
       </section>
-
-      <hr />
 
       <!-- Publications -->
       <section id="publications">
-        <h2 class="section-title">📚 Publications</h2>
+        <h2 class="section-title">📚 Selected Publications</h2>
+        <div class="card-grid">
 
-        <div class="pub-card">
-          <span class="pub-year-badge">2025</span>
-          <p class="pub-title">
-            <a href="https://www.nature.com/articles/s41598-025-14265-9" target="_blank" rel="noopener">
-              Improving rectal tumor segmentation with anomaly fusion derived from anatomical inpainting: a multicenter study
-            </a>
-          </p>
-          <p class="pub-authors"><strong>Lishan Cai</strong>, Mohamed A. Abdelatty, Luyi Han, Doenja M. J. Lambregts, Joost van Griethuysen, Eduardo Pooch, Regina G. H. Beets-Tan, Sean Benson, Joren Brunekreef & Jonas Teuwen</p>
-          <p class="pub-venue"><em>Scientific Reports</em></p>
-          <div class="pub-buttons">
-            <a href="https://www.nature.com/articles/s41598-025-14265-9" class="pub-btn pub-btn-paper" target="_blank" rel="noopener">📄 Paper</a>
-            <a href="https://github.com/Liiiii2101/Anatomy-aware-nnUNet-for-Rectal-Tumor-Segmentation" class="pub-btn pub-btn-github" target="_blank" rel="noopener">💻 GitHub</a>
+          <div class="card">
+            <h3 class="card-title">
+              <a href="https://www.nature.com/articles/s41598-025-14265-9" target="_blank">
+                Improving rectal tumor segmentation with anomaly fusion derived from anatomical inpainting
+              </a>
+            </h3>
+            <p class="card-meta">
+              <strong>Lishan Cai</strong>, et al. · <em>Scientific Reports</em> (2025)
+            </p>
+            <div class="card-links">
+              <a href="https://www.nature.com/articles/s41598-025-14265-9" class="card-link" target="_blank"><i class="fa fa-file-pdf"></i> Paper</a>
+            </div>
           </div>
-        </div>
 
-        <div class="pub-card">
-          <span class="pub-year-badge">2024</span>
-          <p class="pub-title">
-            <a href="https://www.nature.com/articles/s41698-024-00516-x" target="_blank" rel="noopener">
-              An automated deep learning pipeline for EMVI classification and response prediction of rectal cancer using baseline MRI: a multi-centre study
-            </a>
-          </p>
-          <p class="pub-authors"><strong>Lishan Cai</strong>, Doenja M. J. Lambregts, Geerard L. Beets, Monique Maas, Eduardo H. P. Pooch, Corentin Guérendel, Regina G. H. Beets-Tan & Sean Benson</p>
-          <p class="pub-venue"><em>npj Precision Oncology</em></p>
-          <div class="pub-buttons">
-            <a href="https://www.nature.com/articles/s41698-024-00516-x" class="pub-btn pub-btn-paper" target="_blank" rel="noopener">📄 Paper</a>
-            <a href="https://github.com/Liiiii2101/MLNet" class="pub-btn pub-btn-github" target="_blank" rel="noopener">💻 GitHub</a>
+          <div class="card">
+            <h3 class="card-title">
+              <a href="https://www.nature.com/articles/s41698-024-00516-x" target="_blank">
+                An automated deep learning pipeline for EMVI classification and response prediction of rectal cancer
+              </a>
+            </h3>
+            <p class="card-meta">
+              <strong>Lishan Cai</strong>, et al. · <em>npj Precision Oncology</em> (2024)
+            </p>
+            <div class="card-links">
+              <a href="https://www.nature.com/articles/s41698-024-00516-x" class="card-link" target="_blank"><i class="fa fa-file-pdf"></i> Paper</a>
+            </div>
           </div>
+
         </div>
       </section>
 
-      <hr />
+      <!-- Experience & Education -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem;">
+        
+        <section id="experience">
+          <h2 class="section-title">💼 Experience</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-date">2024 – Pres.</div>
+              <div class="timeline-content">
+                <h4>AI Medical Analyst</h4>
+                <p>Amsterdam UMC, Amsterdam</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">2020 – 2024</div>
+              <div class="timeline-content">
+                <h4>PhD Candidate</h4>
+                <p>Netherlands Cancer Institute</p>
+              </div>
+            </div>
+          </div>
+        </section>
 
-      <!-- Education -->
-      <section id="education">
-        <h2 class="section-title">🎓 Education</h2>
-        <ul class="cv-list">
-          <li>
-            <span class="cv-year">2020 – 2024</span>
-            <span class="cv-detail"><strong>PhD in AI for Medical Image Analysis</strong> · Netherlands Cancer Institute</span>
-          </li>
-          <li>
-            <span class="cv-year">2017 – 2019</span>
-            <span class="cv-detail"><strong>M.Sc. in Bioinformatics</strong> · Copenhagen University</span>
-          </li>
-        </ul>
-      </section>
+        <section id="education">
+          <h2 class="section-title">🎓 Education</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-date">2020 – 2024</div>
+              <div class="timeline-content">
+                <h4>PhD in AI</h4>
+                <p>Medical Image Analysis</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">2017 – 2019</div>
+              <div class="timeline-content">
+                <h4>M.Sc. Bioinformatics</h4>
+                <p>Copenhagen University</p>
+              </div>
+            </div>
+          </div>
+        </section>
 
-      <hr />
-
-      <!-- Experience -->
-      <section id="experience">
-        <h2 class="section-title">💼 Experience</h2>
-        <ul class="cv-list">
-          <li>
-            <span class="cv-year">2024 – Present</span>
-            <span class="cv-detail"><strong>AI Medical Analyst</strong> · Amsterdam UMC, Amsterdam</span>
-          </li>
-          <li>
-            <span class="cv-year">2020 – 2024</span>
-            <span class="cv-detail"><strong>PhD Candidate</strong> · Netherlands Cancer Institute</span>
-          </li>
-        </ul>
-      </section>
+      </div>
 
     </main>
   </div>
 
   <footer class="site-footer">
-    <p>© 2026 Lishan Cai &nbsp;·&nbsp; Last updated: April 2026</p>
+    <p>© 2026 Lishan Cai · Built with passion in Amsterdam</p>
   </footer>
 
   <script>
@@ -205,6 +266,24 @@
       root.setAttribute('data-theme', next);
       localStorage.setItem('theme', next);
       icon.className = next === 'dark' ? 'fa fa-sun' : 'fa fa-moon';
+    });
+
+    // Intersection Observer for fade-in effect
+    const observerOptions = {
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = "1";
+          entry.target.style.transform = "translateY(0)";
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('main > section').forEach(section => {
+      observer.observe(section);
     });
   </script>
 
