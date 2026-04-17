@@ -16,6 +16,10 @@
 </head>
 <body>
 
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle night view">
+    <i class="fa fa-moon" id="themeIcon"></i>
+  </button>
+
   <div class="container">
     
     <!-- Sidebar -->
@@ -163,7 +167,7 @@
             <span class="timeline-title">PhD in AI (Medical Image Analysis)</span>
             <span class="timeline-date">2020 – 2024</span>
           </div>
-          <div class="timeline-org">Netherlands Cancer Institue</div>
+          <div class="timeline-org">University of Amsterdam / NKI</div>
         </div>
         <div class="timeline-item">
           <div class="timeline-header">
@@ -177,9 +181,27 @@
     </main>
   </div>
 
-  <footer style="text-align: center; padding: 2rem; color: #888; font-size: 0.8rem; border-top: 1px solid #eee;">
+  <footer style="text-align: center; padding: 2rem; color: #888; font-size: 0.8rem; border-top: 1px solid var(--border);">
     <p>© 2026 Lishan Cai · Built in Amsterdam · 🥔</p>
   </footer>
+
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    const icon   = document.getElementById('themeIcon');
+    const root   = document.documentElement;
+
+    const saved = localStorage.getItem('theme') || 'light';
+    root.setAttribute('data-theme', saved);
+    icon.className = saved === 'dark' ? 'fa fa-sun' : 'fa fa-moon';
+
+    toggle.addEventListener('click', () => {
+      const current = root.getAttribute('data-theme');
+      const next    = current === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      icon.className = next === 'dark' ? 'fa fa-sun' : 'fa fa-moon';
+    });
+  </script>
 
 </body>
 </html>
