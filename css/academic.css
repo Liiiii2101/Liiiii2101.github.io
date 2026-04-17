@@ -1,0 +1,141 @@
+/* ── Academic Minimalist CSS ── */
+:root {
+  --bg: #ffffff;
+  --text: #121212;
+  --text-soft: #333333;
+  --text-muted: #666666;
+  --accent: #0056b3;
+  --border: #eeeeee;
+  --sidebar-w: 280px;
+  --container-max: 1100px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  display: flex;
+  gap: 4rem;
+}
+
+/* Sidebar */
+.sidebar {
+  width: var(--sidebar-w);
+  flex-shrink: 0;
+  position: sticky;
+  top: 4rem;
+  height: fit-content;
+}
+
+.avatar {
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  filter: grayscale(10%);
+}
+
+.name { font-size: 1.75rem; font-weight: 700; margin-bottom: 0.25rem; }
+.title { font-size: 1rem; color: var(--text-soft); margin-bottom: 0.25rem; font-weight: 500; }
+.affiliation { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem; }
+
+.social-links { list-style: none; margin-bottom: 1.5rem; }
+.social-links li { margin-bottom: 0.5rem; font-size: 0.9rem; }
+.social-links a { color: var(--text-soft); display: flex; align-items: center; gap: 0.75rem; }
+.social-links i { width: 1.2rem; text-align: center; color: var(--text-muted); }
+
+.btn-cv {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--text-muted);
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-soft);
+  text-align: center;
+  transition: all 0.2s;
+}
+.btn-cv:hover { background: #f8f8f8; text-decoration: none; border-color: var(--text); }
+
+/* Main Content */
+.main-content { flex: 1; min-width: 0; }
+
+section { margin-bottom: 3.5rem; }
+.section-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.5rem;
+}
+
+p { margin-bottom: 1rem; color: var(--text-soft); }
+
+/* Research Interests / Skills */
+.interests-list { display: flex; flex-wrap: wrap; gap: 1rem; list-style: none; }
+.interests-list li {
+  background: #fcfcfc;
+  border: 1px solid var(--border);
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Publications */
+.pub-list { list-style: none; }
+.pub-item { margin-bottom: 1.5rem; }
+.pub-title { font-weight: 600; display: block; margin-bottom: 0.25rem; }
+.pub-authors { font-size: 0.9rem; color: var(--text-soft); margin-bottom: 0.5rem; }
+.pub-authors strong { color: var(--text); }
+.pub-venue { font-size: 0.85rem; color: var(--text-muted); font-style: italic; margin-left: 0.5rem; }
+.pub-links { display: flex; gap: 1rem; margin-top: 0.5rem; }
+.pub-link {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 1px solid var(--border);
+  padding: 2px 8px;
+  border-radius: 3px;
+  color: var(--text-muted);
+}
+.pub-link:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+
+/* Projects */
+.project-item { margin-bottom: 2rem; }
+.project-header { display: flex; align-items: baseline; gap: 1rem; margin-bottom: 0.5rem; }
+.project-name { font-weight: 700; font-size: 1.1rem; }
+.project-tag { font-size: 0.7rem; font-weight: 800; text-transform: uppercase; color: var(--text-muted); }
+
+/* Timeline (Experience/Education) */
+.timeline-item { margin-bottom: 1.5rem; position: relative; }
+.timeline-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.25rem; }
+.timeline-title { font-weight: 700; font-size: 1rem; }
+.timeline-date { font-size: 0.85rem; color: var(--text-muted); font-weight: 600; }
+.timeline-org { font-size: 0.9rem; color: var(--text-soft); }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .container { flex-direction: column; padding: 2rem 1.5rem; gap: 2rem; }
+  .sidebar { width: 100%; position: static; text-align: center; }
+  .avatar { width: 180px; margin: 0 auto 1.5rem; }
+  .social-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
+  .social-links li { margin-bottom: 0; }
+  .section-title { font-size: 1rem; }
+}
