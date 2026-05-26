@@ -120,6 +120,38 @@ section { margin-bottom: 4rem; }
 
 p { margin-bottom: 1.2rem; color: var(--text-soft); font-size: 1rem; }
 
+/* News Section */
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.news-item {
+  font-size: 0.95rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: baseline;
+}
+
+.news-date {
+  font-weight: 800;
+  color: var(--text-muted);
+  min-width: 85px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+.news-content {
+  color: var(--text-soft);
+  flex: 1;
+}
+
+.news-content em {
+  font-style: italic;
+  color: var(--venue-color);
+}
+
 /* Interests Tags */
 .interests-list { display: flex; flex-wrap: wrap; gap: 0.75rem; list-style: none; }
 .interests-list li {
