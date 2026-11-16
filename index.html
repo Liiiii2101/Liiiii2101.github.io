@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lishan Cai — AI Engineer &amp; Researcher in medical image analysis at Amsterdam UMC.">
   <title>Lishan Cai | AI Engineer &amp; Researcher</title>
+  <script>
+    try { document.documentElement.setAttribute('data-theme', localStorage.getItem('theme') || 'light'); } catch (e) {}
+  </script>
   
   <!-- Potato Icon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥔</text></svg>" />
@@ -37,7 +41,7 @@
           </a>
         </li>
         <li>
-          <a href="https://scholar.google.com" target="_blank" rel="noopener">
+          <a href="https://scholar.google.com/citations?hl=en&user=RTeg6zQAAAAJ" target="_blank" rel="noopener">
             <i class="fa fa-graduation-cap"></i>
             <span>Google Scholar</span>
           </a>
@@ -118,7 +122,7 @@
           </div>
           <p>Top-1 Solution for Segmentation and Detection of Head and Neck Cancer Tumors. Developed a multi-modal deep learning approach for robust lesion detection.</p>
           <div class="pub-links">
-            <a href="https://github.com/Liiiii2101" class="pub-link github" target="_blank">💻 Codebase</a>
+            <a href="https://github.com/Liiiii2101/HECKTOR2025-MEDAI" class="pub-link github" target="_blank" rel="noopener">💻 Codebase</a>
           </div>
         </div>
 
@@ -129,8 +133,8 @@
           </div>
           <p>Improved rectal tumor segmentation using anomaly fusion derived from anatomical inpainting. Integrates domain knowledge into automated segmentation pipelines.</p>
           <div class="pub-links">
-            <a href="https://github.com/Liiiii2101/Anatomy-aware-nnUNet-for-Rectal-Tumor-Segmentation" class="pub-link github" target="_blank">💻 GitHub</a>
-            <a href="https://www.nature.com/articles/s41598-025-14265-9" class="pub-link paper" target="_blank">📑 Paper</a>
+            <a href="https://github.com/Liiiii2101/Anatomy-aware-nnUNet-for-Rectal-Tumor-Segmentation" class="pub-link github" target="_blank" rel="noopener">💻 GitHub</a>
+            <a href="https://www.nature.com/articles/s41598-025-14265-9" class="pub-link paper" target="_blank" rel="noopener">📑 Paper</a>
           </div>
         </div>
 
@@ -141,8 +145,8 @@
           </div>
           <p>An automated deep learning pipeline for EMVI classification and response prediction of rectal cancer using baseline MRI.</p>
           <div class="pub-links">
-            <a href="https://github.com/Liiiii2101/MLNet" class="pub-link github" target="_blank">💻 GitHub</a>
-            <a href="https://www.nature.com/articles/s41698-024-00516-x" class="pub-link paper" target="_blank">📑 Paper</a>
+            <a href="https://github.com/Liiiii2101/MLNet" class="pub-link github" target="_blank" rel="noopener">💻 GitHub</a>
+            <a href="https://www.nature.com/articles/s41698-024-00516-x" class="pub-link paper" target="_blank" rel="noopener">📑 Paper</a>
           </div>
         </div>
 
@@ -156,7 +160,7 @@
             <div class="pub-authors"><strong>Lishan Cai</strong>, et al.</div>
             <div class="pub-venue">Scientific Reports (2025)</div>
             <div class="pub-links">
-              <a href="https://www.nature.com/articles/s41598-025-14265-9" class="pub-link paper" target="_blank">📑 Paper</a>
+              <a href="https://www.nature.com/articles/s41598-025-14265-9" class="pub-link paper" target="_blank" rel="noopener">📑 Paper</a>
             </div>
           </li>
           <li class="pub-item">
@@ -164,7 +168,7 @@
             <div class="pub-authors"><strong>Lishan Cai</strong>, et al.</div>
             <div class="pub-venue">npj Precision Oncology (2024)</div>
             <div class="pub-links">
-              <a href="https://www.nature.com/articles/s41698-024-00516-x" class="pub-link paper" target="_blank">📑 Paper</a>
+              <a href="https://www.nature.com/articles/s41698-024-00516-x" class="pub-link paper" target="_blank" rel="noopener">📑 Paper</a>
             </div>
           </li>
         </ul>
@@ -202,14 +206,14 @@
             <span class="timeline-title">M.Sc. Bioinformatics</span>
             <span class="timeline-date">2017 – 2019</span>
           </div>
-          <div class="timeline-org">Copenhagen University</div>
+          <div class="timeline-org">University of Copenhagen</div>
         </div>
       </section>
 
     </main>
   </div>
 
-  <footer style="text-align: center; padding: 2rem; color: #888; font-size: 0.8rem; border-top: 1px solid var(--border);">
+  <footer class="site-footer">
     <p>© 2026 Lishan Cai · Built in Amsterdam · 🥔</p>
   </footer>
 
@@ -218,15 +222,14 @@
     const icon   = document.getElementById('themeIcon');
     const root   = document.documentElement;
 
-    const saved = localStorage.getItem('theme') || 'light';
-    root.setAttribute('data-theme', saved);
+    const saved = root.getAttribute('data-theme') || 'light';
     icon.className = saved === 'dark' ? 'fa fa-sun' : 'fa fa-moon';
 
     toggle.addEventListener('click', () => {
       const current = root.getAttribute('data-theme');
       const next    = current === 'dark' ? 'light' : 'dark';
       root.setAttribute('data-theme', next);
-      localStorage.setItem('theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
       icon.className = next === 'dark' ? 'fa fa-sun' : 'fa fa-moon';
     });
   </script>

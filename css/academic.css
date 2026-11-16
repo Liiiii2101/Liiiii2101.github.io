@@ -238,6 +238,16 @@ p { margin-bottom: 1.2rem; color: var(--text-soft); font-size: 1rem; }
 .timeline-date { font-size: 0.85rem; color: var(--text-muted); font-weight: 700; }
 .timeline-org { font-size: 0.9rem; color: var(--accent); font-weight: 700; }
 
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  border-top: 1px solid var(--border);
+}
+.site-footer p { margin: 0; color: inherit; font-size: inherit; }
+
 /* Responsive */
 @media (max-width: 900px) {
   .container { flex-direction: column; padding: 3rem 1.5rem; gap: 3rem; }
