@@ -185,7 +185,8 @@ p { margin-bottom: 1.2rem; color: var(--text-soft); font-size: 1rem; }
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
 }
-.pub-item:hover, .project-item:hover { 
+.project-item + .project-item { margin-top: 1.75rem; }
+.pub-item:hover, .project-item:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.05);
   border-color: var(--accent);
